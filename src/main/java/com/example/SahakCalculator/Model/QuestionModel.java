@@ -1,4 +1,4 @@
-package com.example.SahakCalculator.bean;
+package com.example.SahakCalculator.Model;
 
 public class QuestionModel {
     public String question;
