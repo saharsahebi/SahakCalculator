@@ -184,7 +184,7 @@ public class Calculator
             System.out.println();
         }
         else
-            System.out.println("This is an invalid expression");
+            finalresult="This is an invalid expression";
         return finalresult;
     }
     private boolean isOpeningParenthesis(Character newTop)

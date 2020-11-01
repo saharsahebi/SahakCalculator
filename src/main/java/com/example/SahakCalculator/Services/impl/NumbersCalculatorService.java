@@ -10,7 +10,15 @@ public class NumbersCalculatorService implements CalculatorService {
         Calculator myCalc = new Calculator(question);
         String ans= myCalc.print();
         QuestionModel answer=new QuestionModel();
-        answer.setAnswer(ans);
+        answer.setQuestion("Question:"+question);
+        if(!ans.equals("This is an invalid expression"))
+        {
+            answer.setAnswer("Answer:"+ans);
+
+        }
+        else
+            answer.setAnswer("This is an invalid expression");
+
         return answer;
     }
 }
