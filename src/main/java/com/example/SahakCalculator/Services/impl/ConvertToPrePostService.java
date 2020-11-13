@@ -31,7 +31,7 @@ public class ConvertToPrePostService implements CalculatorService {
     {
         QuestionModel answer=new QuestionModel();
         answer.setQuestion(question);
-        answer.setAnswer(Converter.convertposttopre(question));
+        answer.setAnswer(Converter.PostfixToPrifix(question));
 
         return  answer;
     }
@@ -40,7 +40,7 @@ public class ConvertToPrePostService implements CalculatorService {
     {
         QuestionModel answer=new QuestionModel();
         answer.setQuestion(question);
-        answer.setAnswer(Converter.preToPost(question));
+        answer.setAnswer(Converter.PrefixToPostfix(question));
 
         return  answer;
     }
@@ -48,7 +48,7 @@ public class ConvertToPrePostService implements CalculatorService {
     {
         QuestionModel answer=new QuestionModel();
         answer.setQuestion(question);
-        answer.setAnswer(Converter.pretoin(question));
+        answer.setAnswer(Converter.PrefixToInfix(question));
 
         return  answer;
     }
@@ -57,7 +57,7 @@ public class ConvertToPrePostService implements CalculatorService {
     {
         QuestionModel answer=new QuestionModel();
         answer.setQuestion(question);
-        answer.setAnswer(Converter.posttoin(question));
+        answer.setAnswer(Converter.PostfixToInfix(question));
 
         return  answer;
     }

@@ -3,6 +3,8 @@ package com.example.SahakCalculator.bean;
 import java.util.Stack;
 
 public class Converter {
+
+
     static int precedence(char c){
         switch (c){
             case '+':
@@ -17,6 +19,8 @@ public class Converter {
         return -1;
     }
 
+
+    //infix to postfix completed
     public static String infixToPostFix(String expression){
 
         String result = "";
@@ -39,7 +43,6 @@ public class Converter {
             }else if(c=='('){
                 stack.push(c);
             }else{
-                //character is neither operator nor (
                 result += c;
             }
         }
@@ -49,6 +52,8 @@ public class Converter {
         return result;
     }
 
+
+    //infix to prefix completed
     public static StringBuilder infixToPreFix(String expression){
 
         StringBuilder result = new StringBuilder();
@@ -71,7 +76,6 @@ public class Converter {
         for (int i = 0; i <charsExp.length ; i++) {
             char c = charsExp[i];
 
-            //check if char is operator or operand
             if(precedence(c)>0){
                 while(stack.isEmpty()==false && precedence(stack.peek())>=precedence(c)){
                     result.append(stack.pop());
@@ -86,7 +90,6 @@ public class Converter {
             }else if(c=='('){
                 stack.push(c);
             }else{
-                //character is neither operator nor "("
                 result.append(c);
             }
         }
@@ -96,6 +99,8 @@ public class Converter {
         }
         return result.reverse();
     }
+
+    //checking
     static boolean isOperator(char x){
         switch (x){
             case '-':
@@ -107,7 +112,10 @@ public class Converter {
         }
         return false;
     }
-    public static String convertposttopre(String expression){
+
+
+    //Postfix To Prifix completed
+    public static String PostfixToPrifix(String expression){
 
         Stack<String> stack = new Stack<>();
         for (int i = 0; i <expression.length() ; i++) {
@@ -127,7 +135,9 @@ public class Converter {
         return result;
     }
 
-    public static String preToPost(String pre_exp)
+
+    //PrefixToPostfix completed
+    public static String PrefixToPostfix(String pre_exp)
     {
 
         Stack<String> s = new Stack<String>();
@@ -147,32 +157,27 @@ public class Converter {
                 String op2 = s.peek();
                 s.pop();
 
-                // concat the operands and operator
                 String temp = op1 + op2 + pre_exp.charAt(i);
 
-                // Push String temp back to stack
                 s.push(temp);
             }
 
-            // if symbol is an operand
             else {
-                // push the operand to the stack
                 s.push(pre_exp.charAt(i) + "");
             }
         }
 
-        // stack contains only the Postfix expression
         return s.peek();
     }
 
-    public static String pretoin(String str)
+
+    //PrefixToInfix completed
+    public static String PrefixToInfix(String str)
     {
         Stack<String> stack = new Stack<>();
 
-        // Length of expression
         int l = str.length();
 
-        // Reading from right to left
         for(int i = l - 1; i >= 0; i--)
         {
             char c = str.charAt(i);
@@ -181,42 +186,40 @@ public class Converter {
                 String op1 = stack.pop();
                 String op2 = stack.pop();
 
-                // Concat the operands and operator
                 String temp = "(" + op1 + c + op2 + ")";
                 stack.push(temp);
             }
             else
             {
 
-                // To make character to string
                 stack.push(c + "");
             }
         }
         return stack.pop();
     }
+
+
+
+    //checking
     static boolean isOperand(char x)
     {
         return (x >= 'a' && x <= 'z') ||
                 (x >= 'A' && x <= 'Z');
     }
 
-    // Get Infix for a given postfix
-// expression
-    public static String posttoin(String exp)
+   //PostfixToInfix completed
+    public static String PostfixToInfix(String exp)
     {
         Stack<String> s = new Stack<String>();
 
         for (int i = 0; i < exp.length(); i++)
         {
-            // Push operands
             if (isOperand(exp.charAt(i)))
             {
                 s.push(exp.charAt(i) + "");
             }
 
-            // We assume that input is
-            // a valid postfix and expect
-            // an operator.
+
             else
             {
                 String op1 = s.peek();
@@ -228,22 +231,8 @@ public class Converter {
             }
         }
 
-        // There must be a single element
-        // in stack now which is the required
-        // infix.
         return s.peek();
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
