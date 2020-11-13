@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class EquationController {
@@ -25,7 +26,7 @@ public class EquationController {
     }
 
     @RequestMapping("/equanswer")
-    public String convertPre(Model model, Equation equation)
+    public String onevariable(Model model, Equation equation)
     {
         System.out.println("hiii");
         Equation equation1=new Equation();
@@ -34,6 +35,7 @@ public class EquationController {
 
         return "EquationAnswerPage";
     }
+
 
 
 

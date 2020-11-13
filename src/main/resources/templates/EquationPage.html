@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>NumbersCalculaor</title>
+    <title>Equation!</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -27,8 +27,8 @@
 
                 <div class="col-12">
                     <p>
-                        <input class="text" type="text" nid="function" name="function" value="" placeholder="Enter problem" />
-                        <input class="text" type="text" nid="numbersToset" name="numbersToset" value="" placeholder="Enter problem" />
+                        <input class="text" type="text" nid="function" name="function" value="" placeholder="Enter Function : F(x,y,z)=x*y*z" />
+                        <input class="text" type="text" nid="numbersToset" name="numbersToset" value="" placeholder="Enter numbers To set :(2,5,8) " />
 
                     </p>
 
@@ -36,8 +36,7 @@
 
                 <div class="col-12">
                     <ul class="actions">
-                        <li><input type="submit" value="Submit" /></li>
-                        <li><input type="reset" class="style3" value="Clear Form" /></li>
+                        <li><button type="submit" name="action" value="onevariable" >Calculate</button></li>
                     </ul>
                 </div>
             </div>
