@@ -24,8 +24,8 @@
 
 <article class="container box style3">
     <header>
-        <h2>EquationCalculator</h2>
-        <p>Just Enter your Fuction!</p>
+        <h2>Calculator</h2>
+        <p>Just Enter your question!</p>
     </header>
 
 
@@ -36,23 +36,27 @@
         <header>
             <h3></h3>
         </header>
-        <form method="post" action="/equanswer">
+        <form method="post" action="/convert">
             <div class="row">
 
                 <div class="col-12">
                     <p>
-                    <div class="col-6 col-12-mobile">  <input class="text" type="text" nid="function" name="function" value="" placeholder="Enter problem" /></div>
-                    <div class="col-6 col-12-mobile">   <input class="text" type="text" nid="numbersToset" name="numbersToset" value="" placeholder="Enter problem" /></div>
+                        <input class="text" type="text" nid="question" name="question" value="" placeholder="Enter problem" />
                     </p>
-                    <p th:text="${equation1.getFunction()}"/>
-                    <p th:text="${equation1.getAnswer()}"/>
+                    <p th:text="${answer.getQuestion()}"/>
+                    <p th:text="${answer.getAnswer()}"/>
 
                 </div>
 
                 <div class="col-12">
                     <ul class="actions">
-                        <li><input type="submit" value="Submit" /></li>
-                        <li><input type="reset" class="style3" value="Clear Form" /></li>
+                        <li><button type="submit" name="action" value="intopostfix" >In>Post</button></li>
+                        <li><button type="submit"  name="action" value="intoprefix" >In>pre</button></li>
+                        <li><button type="submit"  name="action" value="posttopre" >Post>Pre</button></li>
+                        <li><button type="submit"  name="action" value="pretopost" >Pre>Post</button></li>
+                        <li><button type="submit"  name="action" value="pretoin" >Pre>In</button></li>
+                        <li><button type="submit"  name="action" value="posttoin" >Post>In</button></li>
+
                     </ul>
                 </div>
             </div>

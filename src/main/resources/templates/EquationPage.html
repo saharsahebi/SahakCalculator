@@ -1,10 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <title>NumbersCalculaor</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body>
-$END$
+
+<h1></h1>
+
+
+<article class="container box style3">
+    <header>
+        <h2>EquationCalculator</h2>
+        <p>Just Enter your Function!</p>
+    </header>
+
+    <section>
+        <header>
+            <h3></h3>
+        </header>
+        <form method="post" action="equanswer">
+            <div class="row">
+
+                <div class="col-12">
+                    <p>
+                        <input class="text" type="text" nid="function" name="function" value="" placeholder="Enter problem" />
+                        <input class="text" type="text" nid="numbersToset" name="numbersToset" value="" placeholder="Enter problem" />
+
+                    </p>
+
+                </div>
+
+                <div class="col-12">
+                    <ul class="actions">
+                        <li><input type="submit" value="Submit" /></li>
+                        <li><input type="reset" class="style3" value="Clear Form" /></li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </section>
+</article>
+
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.poptrox.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
 </body>
 </html>

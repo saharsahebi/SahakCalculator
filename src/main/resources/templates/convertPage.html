@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Convert</title>
+    <title>NumbersCalculaor</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -24,38 +24,37 @@
 
 <article class="container box style3">
     <header>
-        <h2>Converter</h2>
+        <h2>Calculator</h2>
         <p>Just Enter your question!</p>
     </header>
 
 
-    <section>
-        <header>
-            <h3>Descriptions:</h3>
-        </header>
-        <p></p>
-        <hr />
-        <p></p>
-    </section>
+
 
 
     <section>
         <header>
             <h3></h3>
         </header>
-        <form method="post" action="/convertcon">
+        <form method="post" action="/convert">
             <div class="row">
 
                 <div class="col-12">
                     <p>
                         <input class="text" type="text" nid="question" name="question" value="" placeholder="Enter problem" />
                     </p>
+
+
                 </div>
 
                 <div class="col-12">
                     <ul class="actions">
-                        <li><input type="submit" value="Submit" /></li>
-                        <li><input type="reset" class="style3" value="Clear Form" /></li>
+                        <li><button type="submit" name="action" value="intopostfix" >In>Post</button></li>
+                        <li><button type="submit"  name="action" value="intoprefix" >In>pre</button></li>
+                        <li><button type="submit"  name="action" value="posttopre" >Post>Pre</button></li>
+                        <li><button type="submit"  name="action" value="pretopost" >Pre>Post</button></li>
+                        <li><button type="submit"  name="action" value="pretoin" >Pre>In</button></li>
+                        <li><button type="submit"  name="action" value="posttoin" >Post>In</button></li>
                     </ul>
                 </div>
             </div>
@@ -74,3 +73,4 @@
 
 </body>
 </html>
+
